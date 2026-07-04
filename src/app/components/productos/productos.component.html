@@ -1,0 +1,79 @@
+<div class="container mt-4">
+
+  <h2 class="text-center mb-4">
+    Catálogo de Videojuegos
+  </h2>
+
+  <div class="row mb-4">
+
+    <div class="col-md-6">
+
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Buscar videojuego..."
+        [(ngModel)]="buscar"
+        (input)="filtrarProductos()">
+
+    </div>
+
+    <div class="col-md-6">
+
+      <select
+        class="form-select"
+        [(ngModel)]="categoriaSeleccionada"
+        (change)="filtrarProductos()">
+
+        <option>Todas</option>
+<option>PlayStation 5</option>
+<option>Xbox Series X</option>
+<option>Nintendo Switch</option>
+<option>PC</option>
+<option>Accesorios Gamer</option>
+
+      </select>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    @for (producto of productosFiltrados; track producto.idProducto) {
+
+      <div class="col-md-4 mb-4">
+
+        <div class="card h-100 shadow">
+
+          <img
+            [src]="producto.imagen"
+            class="card-img-top"
+            height="250"
+            alt="{{producto.nombre}}">
+
+          <div class="card-body">
+
+            <h5>{{producto.nombre}}</h5>
+
+            <p>{{producto.descripcion}}</p>
+
+            <p>
+              <strong>Categoría:</strong>
+              {{producto.categoria.nombre}}
+            </p>
+
+            <h4 class="text-primary">
+              ${{producto.precio}}
+            </h4>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+</div>

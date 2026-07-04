@@ -1,0 +1,11 @@
+.card{
+    transition: .3s;
+}
+
+.card:hover{
+    transform: scale(1.03);
+}
+
+.card img{
+    object-fit: cover;
+}
