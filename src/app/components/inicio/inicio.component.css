@@ -1,5 +1,61 @@
-.container{
+.banner{
 
-    margin-top:120px;
+    background:#79aee3;
+
+    padding:60px;
+
+    border-radius:10px;
+
+    text-align:center;
+
+}
+
+.banner h1{
+
+    font-size:45px;
+
+    font-weight:bold;
+
+}
+
+.banner p{
+
+    font-size:20px;
+
+}
+
+.producto{
+
+    width:170px;
+
+    height:220px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+    transition:.3s;
+
+}
+
+.producto:hover{
+
+    transform:scale(1.05);
+
+}
+
+.footer{
+
+    background:#b8e3a5;
+
+    padding:25px;
+
+    text-align:center;
+
+}
+
+.footer p{
+
+    margin:0;
 
 }
